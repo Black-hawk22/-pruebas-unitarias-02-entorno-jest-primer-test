@@ -2,12 +2,16 @@
   "name": "pruebas-unitarias-02",
   "version": "1.0.0",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/*.test.ts"]
+    "testMatch": ["**/tests/**/*.test.ts"],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
+    "coverageReporters": ["lcov", "text"]
   },
   "devDependencies": {
     "@types/express": "^4.17.0",

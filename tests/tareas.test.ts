@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from './app';
+import app from '../app';
 
 describe('GET /tareas', () => {
   it('debe responder con status 200', async () => {
